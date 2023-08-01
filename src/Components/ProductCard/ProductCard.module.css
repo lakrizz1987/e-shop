@@ -1,0 +1,42 @@
+.product-box{
+    width: 250px;
+    height: 360px;
+    padding: 5px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    font-family: fantasy;
+    font-size: 18px;
+}
+
+.product-box:hover{
+    transform: scale(1.02);
+}
+
+.product-card-img{
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 200px;
+}
+
+.prevPrice{
+    text-decoration: line-through;
+    margin-right: 5px;
+    color: red;
+}
+
+.bagBtn{
+    align-self: center;
+    min-height: 26px;
+    width: 80%;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+}
+
+.bagBtn:hover{
+    background-color: rgba(252, 252, 79, 0.873);
+}

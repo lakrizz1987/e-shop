@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import AllProducts from './Components/AllProducts/AllProducts';
+import CasualProducts from './Components/CasualProducts/CasualProducts';
+import Details from './Components/Details/Details';
+import Footer from './Components/Footer/Footer';
+import Header from './Components/Header/Header';
+import SportProducts from './Components/SportProducts/SportProducts';
+
+import { ProductProvider } from './context/ProductContext';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProductProvider>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path='/' element={<AllProducts />}></Route>
+          <Route path='/sport' element={<SportProducts />}></Route>
+          <Route path='/casual' element={<CasualProducts />}></Route>
+          <Route path='/search' element={<AllProducts />}></Route>
+          <Route path='/details/:id' element={<Details />}></Route>
+        </Routes>
+        <Footer />
+      </div>
+    </ProductProvider>
   );
 }
 
