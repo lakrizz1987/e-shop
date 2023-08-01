@@ -20,6 +20,7 @@ function App() {
           <Route path='/casual' element={<CasualProducts />}></Route>
           <Route path='/search' element={<AllProducts />}></Route>
           <Route path='/details/:id' element={<Details />}></Route>
+          <Route path="*" element={<Navigate to="/" replace />}/>
         </Routes>
         <Footer />
       </div>
