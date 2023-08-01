@@ -7,7 +7,7 @@ import Header from './Components/Header/Header';
 import SportProducts from './Components/SportProducts/SportProducts';
 
 import { ProductProvider } from './context/ProductContext';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   return (
